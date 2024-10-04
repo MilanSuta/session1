@@ -251,3 +251,19 @@ while True:
             print(f"No course found with ID {course_id}.")
     else:
         print("Invalid input. Please enter a valid course ID, 'quit', or '0'.")
+
+while True:
+    user_input = input("Enter a course ID (1-15)")
+
+    if user_input.isdigit():
+        course_id = int(user_input)
+
+        if 1 <= course_id <= 15:
+            for course in courses:
+                if course[0] == course_id:
+                    print(f"Course ID {course_id} is in the {course[2]} department.")
+                    break
+            break
+        else:
+            print("Course ID is out of range (1-15), try again.")
+
