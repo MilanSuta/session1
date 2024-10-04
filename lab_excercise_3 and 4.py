@@ -152,6 +152,8 @@ for course in courses:
 #
 #
 #################
+
+
 # 1. Conditional statement
 courses = [
     (1, "Introduction to Programming"),
@@ -181,3 +183,71 @@ for course in courses:
         break
 if not course_found:
     print(f"\nNo course found with ID {user_input}.")
+
+
+while True:
+    user_input = input("Enter a command (type 'quit' or '0' to exit): ")
+    
+    if user_input.lower() == "quit" or user_input == "0":
+        print("Exiting the loop...")
+        break
+    else:
+        print("user input is", user_input)
+
+while True:
+    user_input = input("Enter a course ID, or type 'quit' or '0' to exit: ")
+
+    if user_input.lower() == "quit" or user_input == "0":
+        print("Exiting the program...")
+        break
+
+    if user_input.isdigit():
+        course_id = int(user_input)
+        course_found = False
+        
+        for course in courses:
+            if course[0] == course_id:
+                print(f"Course ID {course_id} corresponds to: {course[1]}")
+                course_found = True
+                break
+        
+        if not course_found:
+            print(f"No course found with ID {course_id}.")
+    else:
+        print("Invalid input. Please enter a valid course ID, 'quit', or '0'.")
+
+# Sample course data
+courses = [
+    (1, "Introduction to Programming", "Computer Science"),
+    (2, "Calculus I", "Mathematics"),
+    (3, "Data Structures and Algorithms", "Computer Science"),
+    (4, "Linear Algebra", "Mathematics"),
+    (5, "Physics I", "Physics"),
+    (6, "Chemistry I", "Chemistry"),
+    (7, "Biology I", "Biology"),
+    (8, "Microeconomics", "Economics"),
+    (9, "Macroeconomics", "Economics"),
+    (10, "Psychology I", "Psychology"),
+]
+
+while True:
+    user_input = input("Enter a course ID, or type 'quit' or '0' to exit: ")
+
+    if user_input.lower() == "quit" or user_input == "0":
+        print("Exiting the program...")
+        break
+
+    if user_input.isdigit():
+        course_id = int(user_input)
+        course_found = False
+        
+        for course in courses:
+            if course[0] == course_id:
+                print(f"The course department for ID {course_id} is: {course[2]}")
+                course_found = True
+                break
+        
+        if not course_found:
+            print(f"No course found with ID {course_id}.")
+    else:
+        print("Invalid input. Please enter a valid course ID, 'quit', or '0'.")
