@@ -4,30 +4,38 @@
 
 #1
 course_enrollments = {
-    "Stu01": ["ICT104", "ICT107", "ICT105"],
-    "Stu02": ["ICT107", "BUS105", "ICT106"],
-    "Stu03": ["ICT007", "BUS109", "ICT302"],
-    "Stu04": ["ICT005", "BUS105", "ICT502"],
+    "1001": ["CS101", "MATH101", "PHY101"],
+    "1002": ["CS202", "MATH102", "CHEM101"],
+    "1003": ["BIO101", "ENGL101", "HIST101"],
+    "1004": ["SOC101", "PSY101", "ECON101"]
 }
 
 for student_id, courses in course_enrollments.items():
     print(f"Student ID: {student_id}")
     print("Enrolled courses:", ", ".join(courses))
-    print() 
+    print()
 
 #2
 departments = {
-    "ICT": [
-        ("ICT104", "Introduction to Computing"),
-        ("ICT107", "Data Structures"),
-        ("ICT105", "Database Management"),
-        ("ICT106", "Networking"),
-        ("ICT302", "Advanced Computing"),
-        ("ICT502", "Cybersecurity"),
+    "Computer Science": [
+        ("CS101", "Introduction to Computer Science"),
+        ("CS202", "Data Structures and Algorithms")
     ],
-    "BUS": [
-        ("BUS105", "Principles of Business"),
-        ("BUS109", "Business Analytics"),
+    "Mathematics": [
+        ("MATH101", "Calculus I"),
+        ("MATH102", "Calculus II")
+    ],
+    "Physics": [
+        ("PHY101", "General Physics I"),
+        ("PHY102", "General Physics II")
+    ],
+    "Chemistry": [
+        ("CHEM101", "General Chemistry I"),
+        ("CHEM102", "General Chemistry II")
+    ],
+    "Biology": [
+        ("BIO101", "Biology I"),
+        ("BIO102", "Biology II")
     ]
 }
 
@@ -38,16 +46,18 @@ for department, courses in departments.items():
         print(f"Course ID: {course_id}, Course Name: {course_name}")
     print()
 
-
 #3
-lecturer_Assignments = {
-    "Dr. Alice Smith": ["ICT104", "ICT107"],
-    "Prof. John Doe": ["BUS105", "ICT106"],
-    "Dr. Emily Davis": ["ICT105", "ICT302"],
-    "Prof. Michael Brown": ["BUS109", "ICT502"]
+lecturer_assignments = {
+    "Dr. Sarah Collins": ["CS101", "CS202"],
+    "Prof. Mark Evans": ["MATH101", "MATH102"],
+    "Dr. Robert Thompson": ["PHY101", "PHY102"],
+    "Prof. Jennifer Parker": ["CHEM101", "BIO101"],
+    "Dr. Emily Davis": ["BIO102", "ENGL101"],
+    "Prof. Michael Scott": ["SOC101", "PSY101"],
+    "Dr. James Smith": ["ECON101", "HIST101"]
 }
 
-for lecturer, courses in lecturer_Assignments.items():
+for lecturer, courses in lecturer_assignments.items():
     print("Lecturer: ", lecturer)
     print("Courses taught:", ", ".join(courses))
     print()
