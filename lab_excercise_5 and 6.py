@@ -32,8 +32,22 @@ departments = {
 }
 
 for department, courses in departments.items():
-    print(f"Department: {department}")
+    print("Department: ", department)
     for course in courses:
         course_id, course_name = course
         print(f"Course ID: {course_id}, Course Name: {course_name}")
+    print()
+
+
+#3
+lecturer_Assignments = {
+    "Dr. Alice Smith": ["ICT104", "ICT107"],
+    "Prof. John Doe": ["BUS105", "ICT106"],
+    "Dr. Emily Davis": ["ICT105", "ICT302"],
+    "Prof. Michael Brown": ["BUS109", "ICT502"]
+}
+
+for lecturer, courses in lecturer_Assignments.items():
+    print("Lecturer: ", lecturer)
+    print("Courses taught:", ", ".join(courses))
     print()
